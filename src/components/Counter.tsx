@@ -5,31 +5,32 @@ import {Input} from "./Input";
 
 
 export const Counter = () => {
-    const [count, setCount] = useState<number>(0);
-    const [disabled, setDisabled] = useState(false);
+    const maxCount = 5;
+    const [count, setCount] = useState(0);
 
     useEffect(() => {
-        let getCoun = localStorage.getItem('counterKey');
-        if (getCoun) {
-            let newCount = JSON.parse(getCoun);
+        const getCount = localStorage.getItem('counterKey');
+        if (getCount) {
+            const newCount = JSON.parse(getCount);
             setCount(newCount);
         }
     }, []);
+
     useEffect(() => {
         localStorage.setItem('counterKey', JSON.stringify(count));
-        setDisabled(count >= 5)
     }, [count]);
 
     const handleIncClick = () => {
-        if (count < 5) {
+        if (count < maxCount) {
             setCount(count + 1);
         }
     }
     const handleResetClick = () => {
         localStorage.clear();
         setCount(0);
-        setDisabled(false);
+
     }
+    const isCountMoreFive = count >= maxCount
     return (
         <>
             <StyledCounter>
@@ -46,13 +47,13 @@ export const Counter = () => {
                     </Div>
                 </Div>
                 <Div>
-                    <Div $sizeHeight='20vh' $sizeWidth='40vh' $color={disabled ? 'red': ''}>
+                    <Div $sizeHeight='20vh' $sizeWidth='40vh' $color={isCountMoreFive ? 'red': ''}>
                         <h1>{count}</h1>
                     </Div>
                     <Div $sizeHeight='10vh' $sizeWidth='40vh'>
                         <Button
                             onClick={handleIncClick}
-                            disabled={disabled}
+                            disabled={isCountMoreFive}
                         >Click</Button>
                         <Button
                             onClick={handleResetClick}

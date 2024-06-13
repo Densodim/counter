@@ -22,13 +22,13 @@ export const StyledCounterText = styled.span`
 
 export const Div = styled.div.attrs<DivType>(props => ({
     $sizeHeight: props.$sizeHeight || '40vh',
-    $sizeWidth: props.$sizeWidth || '50vh',
+    $sizeWidth: props.$sizeWidth || '32vh',
     $color: props.$color || 'black',
 }))`
     color: ${props => props.$color};
     border: solid 2px black;
     border-radius: 5px;
-    height: ${props => props.$sizeHeight};
+    min-height: ${props => props.$sizeHeight};
     width: ${props => props.$sizeWidth};
     margin: 20px;
     display: flex;
@@ -40,16 +40,15 @@ export const Div = styled.div.attrs<DivType>(props => ({
 export const StyledButton = styled.button`
     background: ${props=> props.disabled ? '#d9e2e3' : '#61dafb' };
     color: aliceblue;
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 1em;
     padding: 0.25em 1em;
-    border: solid 2px cornflowerblue;
+    border: solid 3px cornflowerblue;
     border-radius: 3px;
     cursor: ${props => props.disabled ? 'no-drop':'pointer'};
     opacity: ${props => props.disabled ? '0.6':'1'};
     &:active{
         border: solid 3px black;
-        font-size: 1.6em;
     }
 `
 
@@ -60,5 +59,5 @@ export const StyledInput = styled.input.attrs({type: 'number'})`
     background: blanchedalmond;
     border: solid 1px black;
     border-radius: 3px;
-    min-height: 5em;
+    min-height: 1.5em;
 `
