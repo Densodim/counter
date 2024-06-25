@@ -1,4 +1,4 @@
-import {StyledInput} from "./styled/styledComponent";
+import {StyledInput} from "../styled/styledComponent";
 
 type PropsType = {
     label:string

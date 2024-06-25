@@ -1,5 +1,5 @@
 import React, {ReactNode} from "react";
-import {StyledButton} from "./styled/styledComponent";
+import {StyledButton} from "../styled/styledComponent";
 
 type PropsType = {
     children: ReactNode
