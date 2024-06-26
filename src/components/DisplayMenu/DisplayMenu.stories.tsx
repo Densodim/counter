@@ -32,7 +32,7 @@ interface DisplayMenuProps {
 
 export const DisplayMenuView = ({
    isCountMore = false,
-   isCounterReset = false,
+   isCounterReset = false,   
    handleResetClick = ()=>{},
 }:DisplayMenuProps)=> {
    let [count, setCount] = useState(0);
