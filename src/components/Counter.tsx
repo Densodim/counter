@@ -1,8 +1,7 @@
-import React, { ChangeEvent, SetStateAction, useEffect, useState } from "react";
-import { StyledCounter, Div, StyledInput } from "./styled/styledComponent";
-import { Button } from "./Button/Button";
+import React, {useEffect, useState } from "react";
+import { StyledCounter} from "./styled/styledComponent";
 import { SettingMenu } from "./SettingMenu";
-import { DisplayMenu } from "./DisplayMenu";
+import { DisplayMenu } from "./DisplayMenu/DisplayMenu";
 
 export const Counter = () => {
   const [count, setCount] = useState(0);
@@ -59,6 +58,26 @@ export const Counter = () => {
     setMinCounter(0);
   };
 
+  const maxCounterValue = (value:number) => {
+   if (value >= minCounter && value > 0) {
+     setMaxCounter(value);
+   } else if (value < 0) {
+     setMessage("значение не должно быть отрицательным");
+   } else {
+     setMessage("Максимальное значение должно быть больше минимального");
+   }
+ };
+
+ const minCounterValue = (value:number) => {
+   if (value <= maxCounter && value > 0) {
+     setMinCounter(value);
+   } else if (value < 0) {
+     setMessage("значение не должно быть отрицательным");
+   } else {
+     setMessage("Минимальное значение должно быть меньше максимального");
+   }
+ };
+
   const isCountMore = count >= maxCounter;
   const isCounterReset = count === 0 && minCounter === 0 && maxCounter === 0;
   const isMessage = message ? message : count;
@@ -68,12 +87,11 @@ export const Counter = () => {
         <SettingMenu
           count={count}
           setCounter={setCounter}
-          setMessage={setMessage}
           isCounterReset={isCounterReset}
           minCounter={minCounter}
           maxCounter={maxCounter}
-          setMaxCounter={setMaxCounter}
-          setMinCounter={setMinCounter}
+          maxCounterValue={maxCounterValue}
+          minCounterValue={minCounterValue}
         />
 
         <DisplayMenu

@@ -1,5 +1,5 @@
-import { Button } from "./Button/Button";
-import { Div } from "./styled/styledComponent";
+import { Button } from "../Button/Button";
+import { Div } from "../styled/styledComponent";
 
 type PropsType = {
   incClick: () => void;
