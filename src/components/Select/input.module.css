@@ -1,0 +1,42 @@
+    /* Основные стили для селекта */
+    .customSelect {
+      position: relative;
+      font-family: Arial, sans-serif;
+      user-select: none;
+      width: 200px;
+    }
+
+    .selectSelected {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .selectItems {
+      background-color: white;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .selectItems div {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .selectItems div:hover {
+      background-color: #f1f1f1;
+    }
+
+    .selectArrow {
+      margin-left: 10px;
+      transition: transform 0.2s;
+    }
+
+    .selectArrow.up {
+      transform: rotate(180deg);
+    }

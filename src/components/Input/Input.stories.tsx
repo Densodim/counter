@@ -8,6 +8,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
+import style from "./input.module.css";
+
 const meta: Meta<typeof Input> = {
   component: Input,
 };
@@ -111,23 +113,6 @@ type SelectPropsType = {
   items: ItemType;
 };
 
-export const SelectArray = () => {
-  const [value, setValue] = useState([
-    { title: "Minsk", value: "1" },
-    { title: "Grodno", value: "2" },
-  ]);
-
-  return (
-    <>
-      <div>
-        <div>{}</div>
-        {value.map((el) => (
-          <div>{el.title}</div>
-        ))}
-      </div>
-    </>
-  );
-};
 
 export const SelectVariants = () => {
   const items = [
