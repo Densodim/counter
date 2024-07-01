@@ -1,5 +1,26 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import style from './select.module.css';
+
+type ActionType = {
+   type: string
+}
+export type StateType = {
+   isOpen: boolean
+}
+export const TOGGLE_CONSTANT = 'TOGGLE-ISOPEN';
+
+export const reducer = (state:StateType, action:ActionType) => {
+   switch (action.type){
+      case TOGGLE_CONSTANT:
+         return {
+            ...state,
+            isOpen: !state.isOpen
+         }
+      default:
+         throw new Error('Bad action')
+   }
+   return state;
+}
 
 export const Select = () => {
 
@@ -14,18 +35,19 @@ export const Select = () => {
   ];
 
   const [value, setValue] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
-
+//   const [isOpen, setIsOpen] = useState(false);
+  const [colappsed, dispatch] = useReducer(reducer, {isOpen:false});
+  
   const selectRef = useRef(null);
 
   const handlerSelectClick = () => {
-    setIsOpen(!isOpen);
+   //  setIsOpen(!isOpen);
+    dispatch({type:TOGGLE_CONSTANT})
   };
   const handlerOptionClick = (value: string) => {
-   console.log('value', value);
-   
     setValue(value);
-    setIsOpen(false);
+   //  setIsOpen(false);
+   dispatch({type:TOGGLE_CONSTANT})
   };
 
 //   const handlerClickOutside = () => {
@@ -49,11 +71,11 @@ export const Select = () => {
           onClick={handlerSelectClick}
         >
           {value || "Выберите значение"}
-          <span className={`${style.selectArrow} ${isOpen ? style.up : ""}`}>
+          <span className={`${style.selectArrow} ${colappsed.isOpen ? style.up : ""}`}>
             &#9662;
           </span>
         </div>
-        {isOpen ? 
+        {colappsed.isOpen ? 
           <div>
            {options.map((el, index)=>
             <div key={index} onClick={()=>handlerOptionClick(el.title)}>{el.title}</div>
