@@ -7,23 +7,21 @@ import {
   counterMaxAC,
   counterMessageAC,
   CounterReducer,
-  TOOGLE_COUNT,
-  TOOGLE_COUNT_MAX,
-  TOOGLE_COUNT_MESSAGE,
+  StateType,
 } from "./state/counterReducer";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { RootType } from "./state/store";
 
 export const Counter = () => {
-  //   const [count, setCount] = useState(0);
-  //   const [countMax, setCountMax] = useState(0);
-  //   const [message, setMessage] = useState("");
+  const dispatch = useDispatch();
+
   const [maxCounter, setMaxCounter] = useState<number>(0);
   const [minCounter, setMinCounter] = useState<number>(0);
 
-  const [counterValue, dispatch] = useReducer(CounterReducer, {
-    count: 0,
-    countMax: 0,
-    message: "",
-  });
+  const counterValue = useSelector<RootType, StateType>(
+    (state) => state.counter
+  );
 
   useEffect(() => {
     const getCount = localStorage.getItem("counterKey");
@@ -32,14 +30,12 @@ export const Counter = () => {
     if (getCount) {
       const newCount = JSON.parse(getCount);
       dispatch(counterAC(newCount));
-      // setCount(newCount);
     }
     if (getMaxCounter) {
       setMaxCounter(JSON.parse(getMaxCounter));
     }
     if (getMinCounter) {
       dispatch(counterAC(JSON.parse(getMinCounter)));
-      // setCount(JSON.parse(getMinCounter));
     }
   }, []);
 
@@ -55,21 +51,16 @@ export const Counter = () => {
   //   }, [minCounter]);
 
   const setCounter = (minCounter: number, maxCounter: number) => {
-    //  setCount(minCounter);
     dispatch(counterAC(minCounter));
     dispatch(counterMaxAC(maxCounter));
-    //  setCountMax(maxCounter);
   };
 
   const incClick = () => {
     if (counterValue.count < counterValue.countMax) {
       const newCount = counterValue.count + 1;
       dispatch(counterAC(newCount));
-      // setCount(count.count + 1);
-      // setMessage("");
       dispatch(counterMessageAC(""));
     } else {
-      // setMessage("нажмите SET");
       dispatch(counterMessageAC("нажмите SET"));
     }
   };
@@ -77,7 +68,6 @@ export const Counter = () => {
   const ResetClick = () => {
     localStorage.clear();
     dispatch(counterAC(0));
-    //  setCount(0);
     setMaxCounter(0);
     setMinCounter(0);
   };
@@ -86,10 +76,8 @@ export const Counter = () => {
     if (value >= minCounter && value > 0) {
       setMaxCounter(value);
     } else if (value < 0) {
-      // setMessage("значение не должно быть отрицательным");
       dispatch(counterMessageAC("значение не должно быть отрицательным"));
     } else {
-      // setMessage("Максимальное значение должно быть больше минимального");
       dispatch(
         counterMessageAC(
           "Максимальное значение должно быть больше минимального"
@@ -102,10 +90,8 @@ export const Counter = () => {
     if (value <= maxCounter && value > 0) {
       setMinCounter(value);
     } else if (value < 0) {
-      // setMessage("значение не должно быть отрицательным");
       dispatch(counterMessageAC("значение не должно быть отрицательным"));
     } else {
-      // setMessage("Минимальное значение должно быть меньше максимального");
       dispatch(
         counterMessageAC(
           "Минимальное значение должно быть меньше максимального"

@@ -18,11 +18,11 @@ import styled from "styled-components";
 
 
 const PATH = {
-   PAGE1:'/page1',
-   PAGE2:'/page2',
-   PAGE3:'/page3',
-   ERROR:'/error404',
-} as const
+  PAGE1: "/page1",
+  PAGE2: "/page2",
+  PAGE3: "/page3",
+  ERROR: "/error404",
+} as const;
 
 function App() {
   return (
@@ -76,15 +76,15 @@ function App() {
     //   <div className={styles.footer}>abibas 2023</div>
     // </div>
 
-     <div className="App">
-       {/* <Select/> */}
-       <Theme radius={'medium'}>
-         <Counter />
-         <ThemePanel/>
-       </Theme>
-     </div>
+    <div className="App">
+      {/* <Select/> */}
+      
+        <Theme radius={"medium"}>
+          <Counter />
+          <ThemePanel />
+        </Theme>  
+    </div>
   );
 }
 
 export default App;
-

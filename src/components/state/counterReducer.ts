@@ -1,6 +1,3 @@
-export const TOOGLE_COUNT = "count";
-export const TOOGLE_COUNT_MAX = "countMax";
-export const TOOGLE_COUNT_MESSAGE = "message";
 
 export type CountType = {
   type: "TOOGLE_COUNT";
@@ -24,11 +21,17 @@ export type StateType = {
 
 export type ActionsType = CountType | CountMaxType | CountMessageType;
 
+const initialState = {
+   count: 0,
+    countMax: 0,
+    message: "",
+}
+
 export const CounterReducer = (
-  state: StateType,
+  state: StateType = initialState,
   action: ActionsType
 ): StateType => {
-  debugger;
+   
   switch (action.type) {
     case "TOOGLE_COUNT":
       return {
