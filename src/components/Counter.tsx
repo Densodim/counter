@@ -12,6 +12,7 @@ import {
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { RootType } from "./state/store";
+import { setToLocalStorage } from "../local-and-session-storage/setToLocalStorage";
 
 export const Counter = () => {
   const dispatch = useDispatch();
@@ -40,7 +41,8 @@ export const Counter = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("counterKey", JSON.stringify(counterValue.count));
+    setToLocalStorage("counterKey", counterValue.count);
+    //  localStorage.setItem("counterKey", JSON.stringify(counterValue.count));
   }, [counterValue]);
 
   //   useEffect(() => {
