@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Select SelectControledOnDiv smoke-test 1`] = `
+<div class="input_customSelect__jsOGQ">
+  <div class="input_selectSelected__dW1ey">
+    Выберите значение
+    <span class="input_selectArrow__AQA8g ">
+      ▾
+    </span>
+  </div>
+  <span>
+    'Выберите значение'
+  </span>
+</div>
+`;

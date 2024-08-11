@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Input ControlerInput smoke-test 1`] = `"<input value=""> - "`;
+
+exports[`components/Input ControlerInputUseRefOnButtonPres smoke-test 1`] = `"<input> <button>save</button> - "`;
+
+exports[`components/Input ControlledSelect smoke-test 1`] = `
+<select>
+  <option>
+    none
+  </option>
+  <option value="1">
+    Minsk
+  </option>
+  <option value="2">
+    Grodno
+  </option>
+  <option value="3">
+    Gomel
+  </option>
+</select>
+`;
+
+exports[`components/Input ControllerCheckbox smoke-test 1`] = `
+<input type="checkbox"
+       checked
+>
+`;
+
+exports[`components/Input FirstStory smoke-test 1`] = `
+<div>
+  min or max counter
+  <input disabled
+         type="number"
+         class="sc-dsLQwm jiraXB"
+  >
+</div>
+`;
+
+exports[`components/Input SelectVariants smoke-test 1`] = `
+<div>
+  <div class="MuiFormControl-root css-1869usk-MuiFormControl-root">
+    <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+           data-shrink="false"
+           id="demo-simple-select-standard-label"
+    >
+      Age
+    </label>
+    <div class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-n70jm4-MuiInputBase-root-MuiInput-root-MuiSelect-root">
+      <div tabindex="0"
+           role="combobox"
+           aria-controls=":r0:"
+           aria-expanded="false"
+           aria-haspopup="listbox"
+           aria-labelledby="demo-simple-select-standard-label demo-simple-select-standard"
+           id="demo-simple-select-standard"
+           class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+      >
+        <span class="notranslate">
+          ​
+        </span>
+      </div>
+      <input aria-invalid="false"
+             aria-hidden="true"
+             tabindex="-1"
+             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+             value
+      >
+      <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+           focusable="false"
+           aria-hidden="true"
+           viewbox="0 0 24 24"
+           data-testid="ArrowDropDownIcon"
+      >
+        <path d="M7 10l5 5 5-5z">
+        </path>
+      </svg>
+    </div>
+  </div>
+  <div class="MuiFormControl-root css-1869usk-MuiFormControl-root">
+    <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-filled MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-filled css-e4w4as-MuiFormLabel-root-MuiInputLabel-root"
+           data-shrink="false"
+           id="demo-simple-select-filled-label"
+    >
+      Age
+    </label>
+    <div class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-utk17j-MuiInputBase-root-MuiFilledInput-root-MuiSelect-root">
+      <div tabindex="0"
+           role="combobox"
+           aria-controls=":r1:"
+           aria-expanded="false"
+           aria-haspopup="listbox"
+           aria-labelledby="demo-simple-select-filled-label demo-simple-select-filled"
+           id="demo-simple-select-filled"
+           class="MuiSelect-select MuiSelect-filled MuiInputBase-input MuiFilledInput-input css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input"
+      >
+        <span class="notranslate">
+          ​
+        </span>
+      </div>
+      <input aria-invalid="false"
+             aria-hidden="true"
+             tabindex="-1"
+             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+             value
+      >
+      <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconFilled css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+           focusable="false"
+           aria-hidden="true"
+           viewbox="0 0 24 24"
+           data-testid="ArrowDropDownIcon"
+      >
+        <path d="M7 10l5 5 5-5z">
+        </path>
+      </svg>
+    </div>
+  </div>
+</div>
+<div>
+</div>
+`;

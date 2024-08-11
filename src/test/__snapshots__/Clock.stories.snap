@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rect/Clock BaseExample smoke-test 1`] = `
+<div class="Clock_clock__7451i">
+  <h2>
+    Minsk
+  </h2>
+  <div class="Clock_hour_hand__PSCgB"
+       style="transform: rotateZ(216deg);"
+  >
+  </div>
+  <div class="Clock_min_hand__HC6Az"
+       style="transform: rotateZ(42deg);"
+  >
+  </div>
+  <div class="Clock_sec_hand__Idse9"
+       style="transform: rotateZ(6deg);"
+  >
+  </div>
+  <span class="Clock_twelve__ixo7y">
+    12
+  </span>
+  <span class="Clock_one__-QIvg">
+    1
+  </span>
+  <span class="Clock_two__X1X3W">
+    2
+  </span>
+  <span class="Clock_three__UTyIz">
+    3
+  </span>
+  <span class="Clock_four__q2qlk">
+    4
+  </span>
+  <span class="Clock_five__QW2lO">
+    5
+  </span>
+  <span class="Clock_six__D5dId">
+    6
+  </span>
+  <span class="Clock_seven__sIBlP">
+    7
+  </span>
+  <span class="Clock_eight__73WsU">
+    8
+  </span>
+  <span class="Clock_nine__fbcBM">
+    9
+  </span>
+  <span class="Clock_ten__+JWc2">
+    10
+  </span>
+  <span class="Clock_eleven__vS-ol">
+    11
+  </span>
+</div>
+<div>
+  <button>
+    Minsk
+  </button>
+  <button>
+    Tokyo
+  </button>
+  <button>
+    London
+  </button>
+  <span>
+    03
+  </span>
+  :
+  <span>
+    00
+  </span>
+  :
+  <span>
+    00
+  </span>
+</div>
+`;
+
+exports[`Rect/Clock KeysTracker smoke-test 1`] = `"Typed text: "`;

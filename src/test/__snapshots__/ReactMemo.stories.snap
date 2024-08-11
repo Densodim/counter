@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React Memo demo + useMemo Example1 smoke-test 1`] = `
+<button>
+  +
+</button>
+<button>
+  add user
+</button>
+<div>
+  0
+</div>
+<div>
+  <div>
+    DIma
+  </div>
+  <div>
+    Ivan
+  </div>
+</div>
+`;
+
+exports[`React Memo demo + useMemo Example2useMemo smoke-test 1`] = `
+<div>
+  <input value="3">
+  <input value="4">
+</div>
+<div>
+  Result A: 6
+</div>
+<div>
+  Result B: 24
+</div>
+`;
+
+exports[`React Memo demo + useMemo likeUseCallback smoke-test 1`] = `
+<button>
+  +
+</button>
+<button>
+  add book
+</button>
+<div>
+  0
+</div>
+<div>
+  <button>
+    add book
+  </button>
+</div>
+`;

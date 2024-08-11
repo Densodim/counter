@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useState demo Example1 smoke-test 1`] = `
+<button>
+  +
+</button>
+<button>
+  add user
+</button>
+<div>
+  Counter: 1
+</div>
+<div>
+  User:PetroIvanKoliaSveta
+</div>
+`;

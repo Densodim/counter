@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/DisplayMenu DisplayMenuDemo smoke-test 1`] = `
+<div class="rt-Flex rt-r-display-flex rt-r-fd-column rt-r-ai-center">
+  <div class="rt-Box rt-r-w rt-r-min-h c-mXwbI"
+       style="--width: 40vh; --min-height: 20vh;"
+  >
+    <h1>
+      test value
+    </h1>
+  </div>
+  <div class="rt-Grid rt-r-gtc-2 rt-r-ai-center rt-r-gap-2 rt-r-w rt-r-h c-hSjEQt"
+       style="--width: 40vh; --height: 10vh;"
+  >
+    <button data-disabled="true"
+            data-accent-color
+            class="rt-reset rt-BaseButton rt-r-size-2 rt-variant-solid rt-Button"
+            disabled
+    >
+      Click
+    </button>
+    <button data-disabled="true"
+            data-accent-color
+            class="rt-reset rt-BaseButton rt-r-size-2 rt-variant-solid rt-Button"
+            disabled
+    >
+      Reset
+    </button>
+  </div>
+</div>
+`;
+
+exports[`components/DisplayMenu DisplayMenuView smoke-test 1`] = `
+<div class="sc-elDIKY kwaTWH">
+  <div class="sc-elDIKY giWUXE">
+    <h1>
+      0
+    </h1>
+  </div>
+  <div class="sc-elDIKY bEheNf">
+    <button class="sc-fQpRED bNEqgQ">
+      Click
+    </button>
+    <button class="sc-fQpRED bNEqgQ">
+      Reset
+    </button>
+  </div>
+</div>
+`;
