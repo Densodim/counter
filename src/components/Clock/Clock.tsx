@@ -35,7 +35,7 @@ export const Clock: FC<PropsType> = (props) => {
     <>
     <AnalogClock title={city.city} datediff={city.datediff}/>
       <div>
-         <button onClick={()=>{handleData('Minsk', 1)}}>Minsk</button>
+         <button onClick={()=>{handleData('Minskk', 1)}}>Minsk</button>
          <button onClick={()=>{handleData('Tokyo', 6)}}>Tokyo</button>
          <button onClick={()=>{handleData('London', 9)}}>London</button>
         <span>{hoursString}</span>

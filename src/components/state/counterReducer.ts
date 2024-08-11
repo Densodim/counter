@@ -24,7 +24,7 @@ export type ActionsType = CountType | CountMaxType | CountMessageType;
 const initialState = {
    count: 0,
     countMax: 0,
-    message: "",
+    message: "", 
 }
 
 export const CounterReducer = (
